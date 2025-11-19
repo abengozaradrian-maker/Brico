@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Información</title>
+    <style>
+        body {
+            background-color: AntiqueWhite;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 25px;
+            color: brown;
+            font-family: Arial;
+        }
+
+        label {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de Información</h1>
+
+    <form action="formulario.php" method="POST">
+
+        <label for="nombreyapellidos">Nombre y apellidos:</label>
+        <input type="text" id="nombreyapellidos" name="nombreyapellidos" maxlength="50">
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" maxlength="8">
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="anónimo" disabled>
+
+        <label>Nivel:</label>
+        <input type="radio" id="profesional" name="nivel" value="profesional">
+        <label for="profesional">Profesional</label>
+
+        <input type="radio" id="avanzado" name="nivel" value="avanzado" checked>
+        <label for="avanzado">Avanzado</label>
+
+        <input type="radio" id="principiante" name="nivel" value="principiante">
+        <label for="principiante">Principiante</label>
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <select id="nacionalidad" name="nacionalidad">
+            <option value="España">España</option>
+        </select>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+
+        <label>
+            <input type="checkbox" id="novedades" name="novedades" checked>
+            Deseo recibir información sobre novedades y ofertas
+        </label>
+
+        <label>
+            <input type="checkbox" id="acepto" name="acepto">
+            Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos
+        </label>
+
+        <label for="foto">Adjuntar foto:</label>
+        <input type="file" id="foto" name="foto">
+
+        <br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar datos">
+
+    </form>
+</body>
+</html>
